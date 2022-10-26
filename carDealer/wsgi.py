@@ -1,5 +1,5 @@
 """
-WSGI config for carDealerData project.
+WSGI config for carDealer project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
