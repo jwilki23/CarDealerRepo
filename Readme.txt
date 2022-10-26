@@ -1,1 +1,1 @@
-This is a Readme Johnny is homo
+This is a Readme Johnny is NOT homo
