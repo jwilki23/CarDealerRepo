@@ -1,5 +1,5 @@
 """
-ASGI config for carDealerData project.
+ASGI config for carDealer project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
