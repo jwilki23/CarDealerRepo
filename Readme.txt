@@ -1,1 +1,1 @@
-This is a Readme Johnny is a straight man with a female
+This is a Readme Johnny is homo
