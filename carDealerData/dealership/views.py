@@ -1,5 +1,3 @@
-from curses.ascii import HT
-from django.shortcuts import render
 from django.http import HttpResponse
 from http.client import HTTPResponse
 # Create your views here.
