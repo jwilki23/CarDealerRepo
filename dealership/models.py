@@ -40,3 +40,7 @@ class Customer(models.Model):
         self.first_name = self.first_name.upper()
         self.last_name = self.last_name.upper()
         super(Customer, self).save()
+
+
+#python3 manage.py makemigrations
+# python3 manage.py migrate
