@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from http.client import HTTPResponse
+from django.shortcuts import render
 # Create your views here.
 def indexPageView(request) :
-    return HttpResponse('This is our homepage')
+    return render(request, 'dealership/index.html') 
 
 def aboutPageView(request) :
-    return HttpResponse('This is our about page')
+    return render(request, 'dealership/about.html') 
 
 def contactPageView(request) :
-    return HttpResponse('This is our contact page')
+    return render(request, 'dealership/contact.html') 
