@@ -1,1 +1,0 @@
-This is a Readme Johnny is NOT homo
