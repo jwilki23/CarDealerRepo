@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dealership',
         'USER' : 'postgres',
-        'PASSWORD' : '',
+        'PASSWORD' : 'Wannabe22!',
         'HOST' : 'localhost'
     }
 }
@@ -122,9 +122,9 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIR = [
-    os.path.join(BASE_DIR, 'carDealer')
-]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'carDealer/static')
+] 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
