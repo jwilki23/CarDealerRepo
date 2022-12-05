@@ -5,7 +5,6 @@ from .views import contactPageView
 from .views import createPageView
 from .views import deletePageView
 from .views import updatePageView
-from .views import readPageView
 
 
 urlpatterns = [
@@ -13,7 +12,6 @@ urlpatterns = [
     path('about/', aboutPageView, name = 'about'),
     path('contact/', contactPageView, name = 'contact'),
     path('create/', createPageView, name = 'create'),
-    path('read/', readPageView, name = 'read'),
     path('update/', updatePageView, name = 'update'),
     path('delete/', deletePageView, name = 'delete'),
 ]
