@@ -4,7 +4,12 @@ from django.shortcuts import render, redirect
 from .models import Car
 # Create your views here.
 def indexPageView(request) :
-    return render(request, 'dealership/index.html') 
+
+    cars = Car.objects.all()
+    context = {
+        'cars' : cars,
+    }
+    return render(request, 'dealership/index.html', context) 
 
 def aboutPageView(request) :
     return render(request, 'dealership/about.html') 
