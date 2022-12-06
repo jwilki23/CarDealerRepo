@@ -9,6 +9,8 @@
   <br>
   <form name="form" method="post" action="{% url 'update' %}">
     {% csrf_token %}
+    <input type="hidden" id='car_id' name='car_id' value='{{car.id}}'>
+
     <label for="make">Make:</label>
     <input type="text" name="make" id="make" value='{{record.make}}' autofocus>
     <br><br>
