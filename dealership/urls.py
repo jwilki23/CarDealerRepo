@@ -14,6 +14,6 @@ urlpatterns = [
     path('contact/', contactPageView, name = 'contact'),
     path('create/', createPageView, name = 'create'),
     path('update/', updatePageView, name = 'update'),
-    path('singleEntry/', showSingleEntryPageView, name = 'singleEntry'),
-    path('delete/', deletePageView, name = 'delete'),
+    path('singleEntry/<int:car_id>/', showSingleEntryPageView, name = 'singleEntry'),
+    path('delete/<int:car_id>/', deletePageView, name = 'delete'),
 ]
