@@ -6,9 +6,9 @@
 <div class="container">
   {% for car in cars %}
   <p>
-    <a class="btn btn-primary" href="{% url 'update' %}">Edit</a>
+    <a class="btn btn-primary" href="{% url 'update' car_id=car.id %}">Edit</a>
     {{car}}
-    <a class="btn btn-primary" href="{% url 'delete' %}">Delete</a>
+    <a class="btn btn-primary" href="{% url 'delete' car_id=car.id %}">Delete</a>
   </p>
   {% endfor %}
 </div>
