@@ -38,6 +38,14 @@ def createPageView(request) :
     else:
         return render(request, 'dealership/create.html')
 
+def showSingleEntryPageView(request, car_id) :
+    data = Car.objects.get(id = car_id)
+
+    context = {
+        "record" : data,
+    }
+    return render(request, 'dealership/update.html' , context)
+
 def updatePageView(request) :
 
     if request.method == 'POST' :
