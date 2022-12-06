@@ -22,17 +22,17 @@ def createPageView(request) :
         
         newCar = Car()
 
-        Car.make = request.POST['make']
-        Car.model = request.POST['model']
-        Car.year = request.POST['year']
-        Car.color = request.POST['color']
-        Car.mileage = request.POST['mileage']
+        newCar.make = request.POST['make']
+        newCar.model = request.POST['model']
+        newCar.year = request.POST['year']
+        newCar.color = request.POST['color']
+        newCar.mileage = request.POST['mileage']
         if request.POST['clean_title'] == "True":
-            Car.cleanTitle = True
+            newCar.cleanTitle = True
         else:
-            Car.cleanTitle = False
+            newCar.cleanTitle = False
 
-        Car.save()
+        newCar.save()
         return redirect('index')
 
     else:
