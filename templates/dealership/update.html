@@ -1,8 +1,42 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<body>
-    <p>This is where users will be able to change records in our database</p>
-</body>
+
+<div class="container">
+  <div class="text-left">
+    <h2 class="section-heading text-uppercase">Customers</h2>
+  </div>
+  <br>
+  <form name="form" method="post" action="{% url 'update' %}">
+    {% csrf_token %}
+    <label for="make">Make:</label>
+    <input type="text" name="make" id="make" value='{{newCar.make}}' autofocus>
+    <br><br>
+
+    <label for="model">Model:</label>
+    <input type="text" name="model" id="model" value='{{newCar.model}}'>
+    <br><br>
+
+    <label for="year">Year:</label>
+    <input type="text" name="year" id="year" value='{{newCar.year}}'>
+    <br><br>
+
+    <label for="color">Color:</label>
+    <input type="text" name="color" id="color" value='{{newCar.color}}'>
+    <br><br>
+
+    <label for="mileage">Mileage:</label>
+    <input type="number" name="mileage" id="mileage" value='{{newCar.mileage}}'>
+
+    <label for="clean_title">Clean title? </label>
+    <select name="clean_title" id="clean_title" value='{{newCar.clean_title}}'>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <!-- <input type="text" name="clean_title" id="clean_title"> -->
+    <br><br>
+
+    <button type="submit">Add</button>
+  </form>
+</div>
 {% endblock %}
-</html>
