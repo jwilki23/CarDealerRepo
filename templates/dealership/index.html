@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<body>
-    <p>This is our homepage</p>
-</body>
+<h1><b>List of Cars</b></h1>
+<a class="btn btn-primary" href="{% url 'create' %}">New Customer</a>
+<div class="container">
+  {% for car in cars %}
+  <p>
+    <a class="btn btn-primary" href="{% url 'update' %}">Edit</a>
+    {{car}}
+    <a class="btn btn-primary" href="{% url 'delete' %}">Delete</a>
+  </p>
+  {% endfor %}
+</div>
 {% endblock %}
-</html>
