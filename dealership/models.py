@@ -12,5 +12,5 @@ class Car(models.Model):
 
 
     def __str__(self):
-        return (self.make,self.model,self.year)
+        return '%s %s %s' %(self.make,self.model,str(self.year))
 
