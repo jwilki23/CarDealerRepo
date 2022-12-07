@@ -1,13 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">Dom's Garage</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}" style="color: #ffc800;">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about" style="color: #ffc800;">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" style="color: #ffc800;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav> 
 
-<div class="container">
-  <div class="text-left">
-    <h2 class="section-heading text-uppercase">Car</h2>
+
+<div class="container" style="margin: auto; width: 50%; padding: 10px; margin-top: 2em;">
+  <div class="text-center">
+    <h2 class="section-heading text-uppercase">Add Car</h2>
   </div>
-  <br>
-  <form name="form" method="post" action="{% url 'create' %}">
+<br>
+  <form name="form" method="post" action="{% url 'create' %}" style="text-align: center;">
     {% csrf_token %}
     <label for="make">Make:</label>
     <input type="text" name="make" id="make" autofocus>
@@ -27,7 +44,7 @@
 
     <label for="mileage">Mileage:</label>
     <input type="number" name="mileage" id="mileage">
-
+    <br><br>
     <label for="clean_title">Clean title? </label>
     <select name="clean_title" id="clean_title">
         <option value="true">Yes</option>
