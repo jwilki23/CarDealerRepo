@@ -20,15 +20,36 @@
   </div>
 </nav> 
 
+<style>
+  .indexcontainer {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+  .indexcontainer img {
+  width: 100%;
+  height: auto;
+}
+</style>
+
         <!-- Masthead-->
-        <img src="{% static 'img/cartitlepage1.jpg'%}" style="width: 110%;" alt="">
+        <div class="indexcontainer">
+          <img src="{% static 'img/cartitlepage1.jpg'%}" style="width: 110%;" alt="">
+          <a class="btn btn-primary btn-xl text-uppercase" href="#cartable" style="position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-60%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          cursor: pointer;">See All Our Cars</a>
+        </div>
         <header class="masthead" >
-          <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+          
         </header>
 
 <section id="cartable">
   <h1 style="text-align: center;"><b>List of Cars</b></h1>
-  <a class="btn btn-primary" href="{% url 'create' %} " style="text-align: center;">Add New Car</a>
+  <a class="btn btn-primary" href="{% url 'create' %} " style="margin:0 auto; display:block;">Add New Car</a>
         <table class="table text-center">
             <thead class="thead-dark">
               <tr>
