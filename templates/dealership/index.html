@@ -16,16 +16,6 @@
 <a class="btn btn-primary" href="{% url 'create' %}">Add New Car</a>
 <br>
 <br>
-<div class="container">
-  {% for car in cars %}
-  <p>
-    <a class="btn btn-primary" href="{% url 'update' car_id=car.id %}">Edit</a>
-    {{car}}
-    <a class="btn btn-primary" href="{% url 'delete' car_id=car.id %}">Delete</a>
-  </p>
-  {% endfor %}
-</div>
-
 
         <table class="table text-center">
             <thead class="thead-dark">
@@ -39,15 +29,15 @@
               </tr>
             </thead> 
             <tbody>
-            {% for cars in cars %}
+            {% for car in cars %}
               <tr>
-                <td>{{cars.make}}</td>
-                <td>{{cars.model}}</td>
-                <td>{{cars.year}}</td>
-                <td>{{cars.color}}</td>
-                <td>{{cars.mileage}}</td>
-                <td>{{cars.cleanTitle}}</td>
-                <td><a class="btn btn-primary" href="{% url 'update' car_id=car.id %}">Edit</a></td>
+                <td>{{car.make}}</td>
+                <td>{{car.model}}</td>
+                <td>{{car.year}}</td>
+                <td>{{car.color}}</td>
+                <td>{{car.mileage}}</td>
+                <td>{{car.cleanTitle}}</td>
+                <td><a class="btn btn-primary" href="{% url 'singleEntry' car_id=car.id %}">Edit</a></td>
                 <td><a class="btn btn-primary" href="{% url 'delete' car_id=car.id %}">Delete</a></td>
               </tr>
             {% endfor %} 
