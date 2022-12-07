@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-87e8.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-87e8.up.railway.app']
 
 DISABLE_COLLECTSTATIC = 0
 
