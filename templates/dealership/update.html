@@ -9,34 +9,35 @@
   <br>
   <form name="form" method="post" action="{% url 'update' %}">
     {% csrf_token %}
+    <input type="hidden" name="car_id" id="car_id" value="{{record.id}}">
     <label for="make">Make:</label>
-    <input type="text" name="make" id="make" value='{{record.make}}' autofocus>
+    <input type="text" name="make" id="make" value="{{record.make}}" autofocus>
     <br><br>
 
     <label for="model">Model:</label>
-    <input type="text" name="model" id="model" value='{{record.model}}'>
+    <input type="text" name="model" id="model" value="{{record.model}}">
     <br><br>
 
     <label for="year">Year:</label>
-    <input type="text" name="year" id="year" value='{{record.year}}'>
+    <input type="text" name="year" id="year" value="{{record.year}}">
     <br><br>
 
     <label for="color">Color:</label>
-    <input type="text" name="color" id="color" value='{{record.color}}'>
+    <input type="text" name="color" id="color" value="{{record.color}}">
     <br><br>
 
     <label for="mileage">Mileage:</label>
-    <input type="number" name="mileage" id="mileage" value='{{record.mileage}}'>
+    <input type="number" name="mileage" id="mileage" value="{{record.mileage}}">
 
     <label for="clean_title">Clean title? </label>
-    <select name="clean_title" id="clean_title" value='{{record.clean_title}}'>
+    <select name="clean_title" id="clean_title" value="{{record.clean_title}}">
         <option value="true">Yes</option>
         <option value="false">No</option>
     </select>
     <!-- <input type="text" name="clean_title" id="clean_title"> -->
     <br><br>
 
-    <button type="submit">Add</button>
+    <button type="submit">Update</button>
   </form>
 </div>
 {% endblock %}
