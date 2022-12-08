@@ -11,14 +11,25 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                 <li class="nav-item"><a class="nav-link" href="{% url 'index' %}" style="color: #ffc800;">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about" style="color: #ffc800;">About</a></li>
+                
                 <li class="nav-item"><a class="nav-link" href="#contact" style="color: #ffc800;">Contact</a></li>
             </ul>
         </div>
     </div>
   </nav> 
 
-
+  <style>
+    .indexcontainer {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Make the image responsive */
+    .indexcontainer img {
+    width: 100%;
+    height: auto;
+  }
+  </style>
 <div class="container" style="margin: auto; width: 50%; padding: 10px; margin-top: 2em;">
   <div class="text-center">
     <h2 class="section-heading text-uppercase">Add Car</h2>
@@ -45,11 +56,10 @@
     <label for="mileage">Mileage:</label>
     <input type="number" name="mileage" id="mileage">
     <br><br>
-    <label for="clean_title">Clean title? </label>
-    <select name="clean_title" id="clean_title">
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-    </select>
+    <label for="clean_title">Clean Title</label>
+    <input type="radio" name="clean_title" id="clean_title" value="True"><br>
+    <label for="salvaged_title">Salvaged Title</label>
+    <input type="radio" name="clean_title" id="salvaged_title" value="False">
     <!-- <input type="text" name="clean_title" id="clean_title"> -->
     <br><br>
 
