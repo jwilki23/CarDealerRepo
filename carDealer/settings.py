@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+# Final Project
+# Authored by : Jacob Wilkinson, Bennett McCullough, Johnny Paulsen, Brock Smiley, Kamron Richards
+
 from pathlib import Path
 import os
 from dotenv import load_dotenv
